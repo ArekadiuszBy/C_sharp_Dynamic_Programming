@@ -25,15 +25,14 @@ namespace Dynamic_Programming
             return end;
         }
 
-        int target;
         public bool Sum2(int number, int[] arr)
         {
-            if (target == 0) return true;
-            int len = arr.Length - 1;
+            if (number == 0) return true;
+            if (number < 0) return false;;
 
             foreach(var x in arr)
             {
-                int remainder = target - x;
+                int remainder = number - x;
                 if(Sum2(remainder,arr) == true)
                     return true;
             }

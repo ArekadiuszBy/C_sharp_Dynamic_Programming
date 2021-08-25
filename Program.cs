@@ -37,13 +37,17 @@ namespace Dynamic_Programming
             Console.ReadKey();
 
             CanSumTheNumberFromArray cs = new CanSumTheNumberFromArray();
-            Console.WriteLine(cs.Sum(7, [2, 3])); //true
-            Console.WriteLine(cs.Sum(7, [5,3,4,7])); //true
-            Console.WriteLine(cs.Sum(7, [2,4])); //false
-            Console.WriteLine(cs.Sum(8, [2,3,5])); //true
-            Console.WriteLine(cs.Sum(300, [7,14])); //false
-            Console.WriteLine(cs.Sum(300, [7,14,300])); //true
-            Console.WriteLine(cs.Sum(300, [7,14,286])); //true
+            int[] arr1 = { 2, 3 }; Console.WriteLine(cs.Sum(7, arr1)); //false
+            int[] arr2 = { 2, 9 }; Console.WriteLine(cs.Sum(7, arr2)); //false
+            int[] arr3 = { 2, 4 }; Console.WriteLine(cs.Sum(7, arr3)); //false
+            Console.WriteLine();
+            int[] arr4 = { 2, 3,5 }; Console.WriteLine(cs.Sum(8, arr4)); //true
+            int[] arr5 = { 7, 14 }; Console.WriteLine(cs.Sum(300, arr5)); //false
+            int[] arr5_5_5 = { 7, 14 }; Console.WriteLine(cs.Sum(25600, arr5_5_5)); //false
+
+            //TODO: return true, not false    int[] arr5_5 = { 1,2,3,5,5,6,7,8,9,9999,30595,99573}; Console.WriteLine(cs.Sum(300, arr5_5)); //false
+            int[] arr6 = { 7, 14,300 }; Console.WriteLine(cs.Sum(300, arr6)); //true
+            int[] arr7 = { 1, 14, 286 }; Console.WriteLine(cs.Sum(300, arr7)); //true
 
             Console.ReadKey();
 
